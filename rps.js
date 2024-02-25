@@ -68,6 +68,7 @@ function getPlayerChoice (button) {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == computerSelection) {
+    document.getElementById("winner").innerText = "This match is a tie";
     return "this match is a tie";
     // playerSelection = getPlayerChoice();
     // console.log("Player selection is" + " " + playerSelection);
@@ -75,16 +76,22 @@ function playRound(playerSelection, computerSelection) {
     // console.log("Computer selection is" + " " + computerSelection);
     // return playRound(playerSelection, computerSelection);
   } else if ((playerSelection == "rock") & (computerSelection == "paper")) {
+    document.getElementById("winner").innerText = "Computer wins";
     return "Computer wins";
   } else if ((playerSelection == "rock") & (computerSelection == "scissors")) {
+    document.getElementById("winner").innerText = "Player wins";
     return "Player wins";
   } else if ((playerSelection == "paper") & (computerSelection == "scissors")) {
+    document.getElementById("winner").innerText = "Computer wins";
     return "Computer wins";
   } else if ((playerSelection == "paper") & (computerSelection == "rock")) {
+    document.getElementById("winner").innerText = "Player wins";
     return "Player wins";
   } else if ((playerSelection == "scissors") & (computerSelection == "rock")) {
+    document.getElementById("winner").innerText = "Computer wins";
     return "Computer wins";
   } else if ((playerSelection == "scissors") & (computerSelection == "paper")) {
+    document.getElementById("winner").innerText = "Player wins";
     return "Player wins";
   } else {
     return "someone won, I don't know who";
